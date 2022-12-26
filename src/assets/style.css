@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  @apply min-w-full;
+  @apply h-full;
+  @apply flex flex-col justify-between  items-start;
+  @apply bg-stone-900;
+  @apply text-white;
+  @apply overflow-hidden;
+  @apply fixed;
+  @apply mx-auto;
+  @apply pl-10;
+  @apply z-0;
+  @apply top-0;
+  @apply left-0;
+}
+.bottom-menu {
+  @apply w-full flex justify-between items-center;
+  @apply bg-stone-800;
+  @apply fixed bottom-0;
+  @apply border-t border-solid;
+  @apply text-slate-50;
+  @apply z-10;
+}
+
+.name {
+  @apply text-center;
+  @apply text-sm font-bold;
+  @apply rounded-sm;
+  @apply max-[360px]:text-xs p-0;
+  @apply max-[420px]:text-xs p-0;
+  padding: 0 0 0 5px;
+  @apply hover:bg-stone-700;
+}
+
+.left-menu {
+  @apply flex flex-col justify-between items-center;
+  @apply w-13;
+  @apply h-full;
+  @apply bg-stone-800;
+  @apply fixed;
+  @apply z-10;
+}
+.left-menu .icon {
+  @apply flex flex-col justify-center items-center;
+  @apply h-14;
+  @apply w-full;
+  @apply cursor-pointer;
+}
+.left-menu .icon button {
+  @apply w-full;
+  @apply h-8;
+  @apply flex justify-center items-center;
+  @apply text-center;
+  @apply text-2xl;
+  @apply font-bold;
+  @apply p-1;
+  @apply cursor-pointer;
+  @apply focus:outline-none;
+  @apply focus:border-r-4 focus:border-solid focus:border-white;
+  @apply transition duration-150 ease-in-out;
+  @apply hover:bg-stone-700 rounded-sm;
+}
+.left-menu .icon button img {
+  @apply w-full;
+  @apply h-full;
+  @apply object-contain;
+  @apply mr-1;
+}
+
+.btn-profile {
+  @apply mb-4;
+  @apply max-[360px]:mb-8;
+  @apply max-[420px]:mb-5;
+}
