@@ -1,9 +1,8 @@
-import { BottomMenu, Container, LeftMenu } from './components/home'
+import { BottomMenu, Screen } from './components'
 const App = () => {
   return (
     <>
-      <LeftMenu />
-      <Container />
+      <Screen />
       <BottomMenu />
     </>
   )

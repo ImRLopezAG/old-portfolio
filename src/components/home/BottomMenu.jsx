@@ -1,18 +1,18 @@
 export const BottomMenu = () => {
   return (
     <>
-      <footer className="bottom-menu">
+      <footer className="bottom-menu select-none">
         <div className="flex justify-start w-60 items-center">
-          <div className="bg-blue-500 w-14 px-3">
+          <div className="bg-blue-500 w-16 px-5">
             <img
-              className="w-3 h-6"
+              className="w-3 h-6 "
               src="./assets/icons/remote.svg"
               alt="remote icon"
             />
           </div>
           <div className="flex px-2 items-center">
             <img
-              className="w-5 h-5"
+              className="w-5 h-5 mr-1"
               src="./assets/icons/git.svg"
               alt="Git Icon"
             />
@@ -47,6 +47,7 @@ export const BottomMenu = () => {
             className="flex flex-row name"
             href="https://github.com/ImRLopezAG"
             target={'_blank'}
+            rel="noreferrer"
           >
             <img
               className="w-4 h-5 "

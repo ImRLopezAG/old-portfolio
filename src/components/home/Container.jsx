@@ -1,14 +1,16 @@
-import PropTypes from 'prop-types'
+import { Extensions, Git, Menu, Profile, Projects } from '../container'
 
 export const Container = ({ section }) => {
+  const show = {
+    Extensions: <Extensions />,
+    Git: <Git />,
+    Menu: <Menu />,
+    Profile: <Profile />,
+    Projects: <Projects />,
+  }
   return (
     <main className="container">
-      <section className="p-4">
-        <h1>Hello World</h1>
-      </section>
+      {show[section]}
     </main>
   )
 }
-
-Container.defaultProps = {}
-Container.propTypes = {}

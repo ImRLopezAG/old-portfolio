@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        18: '4.7rem',
-        13: '3.3rem'
-      }
-    }
+        18: '4.5rem',
+        13: '3.3rem',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }

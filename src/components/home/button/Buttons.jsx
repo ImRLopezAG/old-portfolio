@@ -1,7 +1,7 @@
-export const Buttons = ({ src, name }) => {
+export const Buttons = ({ src, name, handleClick, goTo }) => {
   return (
     <div className="icon">
-      <button>
+      <button onClick={() => handleClick()}>
         <img src={src} alt={name} />
       </button>
     </div>
