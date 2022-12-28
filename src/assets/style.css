@@ -41,7 +41,7 @@ html ::-webkit-scrollbar {
 .left-menu {
   @apply flex flex-col justify-between items-center;
   @apply w-13 h-full;
-  @apply bg-stone-800;
+  @apply bg-stone-900;
   @apply fixed z-10;
 }
 .left-menu .icon {
@@ -50,14 +50,14 @@ html ::-webkit-scrollbar {
   @apply cursor-pointer;
 }
 .left-menu .icon button {
-  @apply w-full h-8 p-1;
+  @apply w-full h-11 p-1;
   @apply flex justify-center items-center;
   @apply text-center font-bold text-2xl;
   @apply cursor-pointer;
-  @apply border-solid border-r-4 border-transparent;
-  @apply focus:outline-none focus:border-r-4 focus:border-solid focus:border-white;
+  @apply border-solid border-l-2 border-transparent;
+  @apply focus:outline-none focus:border-l-2 focus:border-solid focus:border-white focus:bg-stone-800;
   @apply transition duration-150 ease-in-out;
-  @apply hover:bg-stone-700 rounded-sm;
+  @apply hover:bg-stone-800 rounded-sm;
 }
 .left-menu .icon button img {
   @apply w-full h-full mr-1;
@@ -207,16 +207,13 @@ html ::-webkit-scrollbar {
   @apply hover:bg-stone-700;
 }
 
-.extensions {
+.side {
   @apply grid grid-cols-2;
-  @apply w-full;
-  @apply h-full;
+  @apply w-full h-full;
   @apply overflow-y-auto;
   @apply pb-6;
 }
-.extensions {
-  @apply max-[768px]:grid-cols-1;
-  @apply max-[720px]:grid-cols-1;
+.c-grid {
   @apply max-[680px]:grid-cols-1;
   @apply max-[640px]:grid-cols-1;
   @apply max-[620px]:grid-cols-1;
@@ -233,21 +230,23 @@ html ::-webkit-scrollbar {
   @apply max-[320px]:grid-cols-1;
 }
 
-.extensions-left {
+.side-left {
   @apply flex flex-col items-center justify-items-center;
   @apply w-auto h-full;
   @apply overflow-y-auto;
+  @apply bg-stone-800;
+  @apply transition duration-1000 ease-in-out;
 }
 
-.extensions-left {
-  @apply max-[1280px]:w-1/2;
-  @apply max-[1180px]:w-1/2;
-  @apply max-[1024px]:w-1/2;
-  @apply max-[960px]:w-1/2;
-  @apply max-[900px]:w-1/2;
-  @apply max-[800px]:w-1/2;
-  @apply max-[768px]:w-2/3;
-  @apply max-[720px]:w-auto;
+.left {
+  @apply max-[1280px]:w-9/12;
+  @apply max-[1180px]:w-9/12;
+  @apply max-[1024px]:w-9/12;
+  @apply max-[960px]:w-9/12;
+  @apply max-[900px]:w-9/12;
+  @apply max-[800px]:w-9/12;
+  @apply max-[768px]:w-9/12;
+  @apply max-[720px]:w-9/12;
   @apply max-[680px]:w-auto;
   @apply max-[640px]:w-auto;
   @apply max-[620px]:w-auto;
@@ -259,20 +258,20 @@ html ::-webkit-scrollbar {
   @apply max-[440px]:w-auto;
 }
 
-.extensions-right {
+.side-right {
   @apply flex flex-col items-center justify-items-start;
   @apply w-full h-full;
   @apply overflow-y-auto;
 }
-.extensions-right {
-  @apply max-[1280px]:w-1/2;
-  @apply max-[1180px]:w-1/2;
-  @apply max-[1024px]:w-1/2;
-  @apply max-[960px]:w-1/2;
-  @apply max-[900px]:w-1/2;
-  @apply max-[800px]:w-1/2;
-  @apply max-[768px]:hidden;
-  @apply max-[720px]:hidden;
+.right {
+  @apply max-[1280px]:w-3/5;
+  @apply max-[1180px]:w-3/5;
+  @apply max-[1024px]:w-3/5;
+  @apply max-[960px]:w-3/5;
+  @apply max-[900px]:w-3/5;
+  @apply max-[800px]:w-3/5;
+  @apply max-[768px]:w-3/5;
+  @apply max-[720px]:w-3/5;
   @apply max-[680px]:hidden;
   @apply max-[640px]:hidden;
   @apply max-[620px]:hidden;
@@ -301,7 +300,7 @@ html ::-webkit-scrollbar {
 .skill-card .skill-img {
   @apply w-20 h-20;
   @apply overflow-hidden;
-  @apply mt-2;
+  @apply my-auto;
 }
 
 .skill-card .skill-img img {
@@ -311,10 +310,60 @@ html ::-webkit-scrollbar {
 .skill-body {
   @apply flex flex-col items-start justify-items-start;
   @apply overflow-y-auto;
-  @apply mt-2 mb-5 mx-6;
+  @apply mt-2 mb-5 mx-3;
   @apply text-start;
 }
 .skill-card .skill-info .skill-name {
   @apply text-lg mt-3 text-start;
   @apply font-bold font-sans;
+}
+
+.skill-card .options {
+  @apply flex flex-row items-end justify-items-end;
+}
+
+.options img {
+  @apply w-5 h-5 ml-2;
+  @apply cursor-pointer;
+  @apply transition duration-150 ease-in-out;
+  @apply hover:opacity-50;
+}
+
+.folder {
+  @apply flex flex-col items-start justify-items-start;
+  @apply w-full h-16 pl-14;
+  @apply cursor-default;
+  @apply transition duration-150 ease-in-out;
+}
+
+.folder .all-pro {
+  @apply flex flex-col items-start justify-items-start;
+  @apply mt-2 mb-5 mx-3 w-full;
+  @apply text-start;
+}
+
+.project .button-project {
+  @apply flex flex-row items-center justify-items-center;
+  @apply overflow-y-auto;
+  @apply pl-5 w-full;
+  @apply text-start;
+}
+
+.button-project .folder-img {
+  @apply w-9 h-9;
+  @apply overflow-hidden;
+  @apply my-auto mr-2;
+}
+
+.button-project .folder-img img {
+  @apply w-full h-full;
+  @apply object-cover;
+}
+
+.button-project .folder-name {
+  @apply text-lg mt-3 text-start;
+  @apply font-bold font-sans;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

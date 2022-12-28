@@ -8,7 +8,7 @@ export const Extensions = () => {
       desc: '.net is a framework for building any type of app that runs on Windows. It includes a large class library called Framework Class Library (FCL) and provides language interoperability across several programming languages. ',
     },
     {
-      name: 'Asp.Net',
+      name: '.Net Framework',
       src: './assets/extensions/asp.net.svg',
       desc: 'ASP.NET is a web application framework developed and marketed by Microsoft to allow programmers to build dynamic web sites, web applications and web services. ',
     },
@@ -84,15 +84,15 @@ export const Extensions = () => {
     },
   ]
   return (
-    <div className="extensions ">
-      <div className="extensions-left ">
+    <div className="side c-grid">
+      <div className="side-left left">
         {skills.map((skill, index) => {
           const { name, src, desc } = skill
           return <Skills key={name + index} name={name} src={src} desc={desc} />
         })}
       </div>
-      <div className="extensions-right max-[680px]:d-none">
-        <DevProfile />
+      <div className="side-right right">
+        <DevProfile refer='These are the languages, framework, database or data administrator that I work'/>
       </div>
     </div>
   )

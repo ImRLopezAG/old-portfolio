@@ -1,4 +1,4 @@
-export const AboutMe = ({ Props }) => {
+export const AboutMe = () => {
   const showAboutMe = () => {
     const aboutMe = document.querySelector('.about-container p')
     aboutMe.classList.toggle('d-none')

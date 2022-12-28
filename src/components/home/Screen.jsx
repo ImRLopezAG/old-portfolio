@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Container } from './'
 
-import { Buttons } from './button'
+import { Buttons, Nav } from './base'
 
 export const Screen = () => {
   const [state, setState] = useState('Profile')
@@ -11,28 +11,7 @@ export const Screen = () => {
   return (
     <>
       <header className="left-menu">
-        <nav>
-          <Buttons
-            handleClick={() => setSectionHandler('Menu')}
-            src={'./assets/icons/menu.svg'}
-            name={'Menu'}
-          />
-          <Buttons
-            handleClick={() => setSectionHandler('Projects')}
-            src={'./assets/icons/explorer.svg'}
-            name={'Documents'}
-          />
-          <Buttons
-            handleClick={() => setSectionHandler('Git')}
-            src={'./assets/icons/git-pull-request.svg'}
-            name={'Git'}
-          />
-          <Buttons
-            handleClick={() => setSectionHandler('Extensions')}
-            src={'./assets/icons/extensions.svg'}
-            name={'Extensions'}
-          />
-        </nav>
+        <Nav setSectionHandler={setSectionHandler} />
         <nav className="btn-profile">
           <Buttons
             handleClick={() => setSectionHandler('Profile')}

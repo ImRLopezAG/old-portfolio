@@ -1,5 +1,5 @@
 import { Contact } from './'
-export const Social = ({ Props }) => {
+export const Social = () => {
   const social = [
     {
       name: 'linkedin',

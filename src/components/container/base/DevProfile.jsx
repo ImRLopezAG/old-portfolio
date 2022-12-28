@@ -1,6 +1,9 @@
 import { Social } from './utils'
 
-export const DevProfile = ({ Props }) => {
+export const DevProfile = ({ refer }) => {
+  const about = `Software developer, passionate about technology in general, I like
+  to find new challenges in the world of programming, provide and
+  receive knowledge from my surroundings.`
   return (
     <div className="dev-profile">
       <div className="profile">
@@ -15,11 +18,7 @@ export const DevProfile = ({ Props }) => {
             <div className="spin"></div>
           </h2>
           <div className="mx-6">
-            <p className="desc">
-              Software developer, passionate about technology in general, I like
-              to find new challenges in the world of programming, provide and
-              receive knowledge from my surroundings.
-            </p>
+            <p className="desc">{refer || about}</p>
           </div>
           <Social />
         </div>
