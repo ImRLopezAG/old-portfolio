@@ -1,7 +1,23 @@
+import { useFetch } from '../../hooks/useFetch'
+import { MenuCard, Skeleton } from './base/utils'
+
 export const Menu = () => {
+  const { repo, loading } = useFetch()
   return (
-    <div>
-      <h1>Hello From Menu</h1>
+    <div className="menu-grid">
+      {loading
+        ? <Skeleton/>
+        : repo.map((project, index) => {
+          const { name, description, id, language } = project
+          return (
+              <MenuCard
+                key={id}
+                name={name}
+                description={description}
+                language={language}
+              />
+          )
+        })}
     </div>
   )
 }

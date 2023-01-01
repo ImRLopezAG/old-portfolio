@@ -8,9 +8,5 @@ export const Container = ({ section }) => {
     Profile: <Profile />,
     Projects: <Projects />,
   }
-  return (
-    <main className="container">
-      {show[section]}
-    </main>
-  )
+  return <main className="container">{show[section]}</main>
 }
