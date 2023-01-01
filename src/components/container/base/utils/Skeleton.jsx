@@ -1,10 +1,8 @@
 export const Skeleton = () => {
   return (
-    <div className="skeleton">
-      <div className="skeleton-avatar"></div>
-      <div className="skeleton-box"></div>
-      <div className="skeleton-box"></div>
-      <div className="skeleton-box"></div>
-    </div>
+    <>
+      <div className="spinner"></div>
+      <h1 className="text-5xl">Loading...</h1>
+    </>
   )
 }

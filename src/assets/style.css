@@ -574,3 +574,10 @@ table {
   @apply text-xs;
   @apply truncate;
 }
+
+.spinner {
+  @apply w-36 h-36;
+  @apply border-4 border-t-4 border-gray-200;
+  @apply rounded-full;
+  @apply animate-spin;
+}

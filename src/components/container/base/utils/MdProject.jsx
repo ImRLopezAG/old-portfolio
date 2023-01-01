@@ -4,7 +4,7 @@ export const MdProject = ({ name, pUrl }) => {
   }
   return (
     <a
-      href={pUrl}
+      href={`${pUrl}#readme`}
       className="flex flex-row items-center ml-16 w-full "
       target="_blank"
       rel="noreferrer"

@@ -5,19 +5,25 @@ export const Menu = () => {
   const { repo, loading } = useFetch()
   return (
     <div className="menu-grid">
-      {loading
-        ? <Skeleton/>
-        : repo.map((project, index) => {
-          const { name, description, id, language } = project
-          return (
-              <MenuCard
-                key={id}
-                name={name}
-                description={description}
-                language={language}
-              />
-          )
-        })}
+      {
+        loading
+          ? (                
+              < Skeleton/>
+            )
+          : (
+              repo.map((project, index) => {
+                const { name, description, id, language } = project
+                return (
+                  <MenuCard
+                    key={id}
+                    name={name}
+                    description={description}
+                    language={language}
+                  />
+                )
+              })
+            )
+      }
     </div>
   )
 }
