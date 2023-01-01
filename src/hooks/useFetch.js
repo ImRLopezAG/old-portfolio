@@ -9,7 +9,7 @@ export const useFetch = () => {
   const getRepos = async () => {
     const repos = await fetchRepos()
     setRepo(repos)
-    setLoading(false)
+    repos.length >= 1 && setLoading(false)
   }
   useEffect(() => {
     getRepos()

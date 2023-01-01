@@ -1,3 +1,4 @@
+import { sortRandom } from '../components/container/base/utils'
 const API = 'https://api.github.com/users/ImRLopezAG/repos'
 
 export const fetchRepos = async () => {
@@ -13,5 +14,5 @@ export const fetchRepos = async () => {
       }))
     })
 
-  return data.sort(() => Math.random() - 0.5)
+  return data.sortRandom()
 }

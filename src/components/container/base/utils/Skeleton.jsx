@@ -1,8 +1,8 @@
 export const Skeleton = () => {
   return (
-    <>
-      <div className="spinner"></div>
-      <h1 className="text-5xl">Loading...</h1>
-    </>
+    <div className="loading  ">
+      <div className="spinner" />
+      <h1 className="relative -left-20 animate-pulse ">Loading...</h1>
+    </div>
   )
 }

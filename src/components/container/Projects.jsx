@@ -13,7 +13,9 @@ export const Projects = () => {
             <div className="project hidden">
               {
                 loading
-                  ? <Skeleton/>
+                  ? <div className='pt-56 px-24'>
+                    <Skeleton />
+                    </div>
                   : repo.map((project, index) => {
                     const { id, name, html_url } = project
                     return (

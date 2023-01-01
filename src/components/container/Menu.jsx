@@ -7,8 +7,10 @@ export const Menu = () => {
     <div className="menu-grid">
       {
         loading
-          ? (                
-              < Skeleton/>
+          ? (
+              <>
+                <Skeleton/>
+              </>
             )
           : (
               repo.map((project, index) => {

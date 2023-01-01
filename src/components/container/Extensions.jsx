@@ -1,4 +1,5 @@
 import { DevProfile, Skills } from './base'
+import { sortRandom } from './base/utils'
 
 export const Extensions = () => {
   const skills = [
@@ -86,13 +87,13 @@ export const Extensions = () => {
   return (
     <div className="side c-grid">
       <div className="side-left left">
-        {skills.map((skill, index) => {
+        {skills.sortRandom().map((skill, index) => {
           const { name, src, desc } = skill
           return <Skills key={name + index} name={name} src={src} desc={desc} />
         })}
       </div>
       <div className="side-right right">
-        <DevProfile refer='These are the languages, framework, database or data administrator that I work'/>
+        <DevProfile refer="These are the languages, framework, database or data administrator that I work" />
       </div>
     </div>
   )
