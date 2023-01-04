@@ -8,7 +8,7 @@ export const useFetch = () => {
 
   const getRepos = async () => {
     const repos = await fetchRepos()
-    setRepo(repos)
+    setRepo(repos.sortRandom())
     repos.length >= 1 && setLoading(false)
   }
   useEffect(() => {

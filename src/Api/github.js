@@ -14,5 +14,5 @@ export const fetchRepos = async () => {
       }))
     })
 
-  return data.sortRandom()
+  return data
 }

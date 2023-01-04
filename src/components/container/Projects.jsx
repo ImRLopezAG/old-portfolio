@@ -20,7 +20,7 @@ export const Projects = () => {
                     const { id, name, html_url } = project
                     return (
                     <ProjectsFolder
-                      key={index}
+                      key={id}
                       name={name}
                       id={id}
                       url={html_url}
