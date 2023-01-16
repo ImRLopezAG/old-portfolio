@@ -54,7 +54,7 @@ export const BottomMenu = () => {
               src="./assets/icons/Github-Copilot.svg"
               alt="Git cat"
             />
-            <span className="px-1 copilot">Angel Lopez</span>
+            <span className="px-1 copilot">IMRLopezAG</span>
           </a>
         </div>
       </footer>

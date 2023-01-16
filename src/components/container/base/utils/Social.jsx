@@ -21,6 +21,11 @@ export const Social = () => {
       icon: 'bi bi-file-earmark-person',
       link: './assets/docs/cv.pdf',
     },
+    {
+      name: 'github',
+      icon: 'bi bi-github',
+      link: 'https://github.com/ImRLopezAG',
+    },
   ]
 
   return (

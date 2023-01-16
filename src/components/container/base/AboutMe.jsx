@@ -3,7 +3,7 @@ export const AboutMe = () => {
     const aboutMe = document.querySelector('.about-container p')
     aboutMe.classList.toggle('d-none')
 
-    const btnImg = document.querySelector('.btn-img')
+    const btnImg = document.querySelector('#btn-img')
     // change the icon
     btnImg.src = btnImg.src.includes('un')
       ? './assets/icons/lock.svg'
@@ -19,7 +19,7 @@ export const AboutMe = () => {
     <div className="about-container mt-1">
       <button onClick={showAboutMe} className="about-me">
         <img
-          className="btn-img"
+          id="btn-img"
           src="./assets/icons/lock.svg"
           alt="Lock Icon"
         />

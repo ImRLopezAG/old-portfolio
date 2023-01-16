@@ -12,7 +12,7 @@ export const Nav = ({ setSectionHandler }) => {
     },
     {
       name: 'Git',
-      src: './assets/icons/git-pull-request.svg',
+      src: './assets/icons/git-branch.svg',
     },
     {
       name: 'Extensions',
@@ -28,7 +28,7 @@ export const Nav = ({ setSectionHandler }) => {
             handleClick={() => setSectionHandler(name)}
             src={src}
             name={name}
-            key={index + name}
+            key={Math.random()}
           />
         )
       })}

@@ -13,9 +13,7 @@ export const DevProfile = ({ refer }) => {
         <div className="profile-info">
           <h1 className="full-name">Angel Gabriel Lopez</h1>
           <h2 className="stack">
-            <div className="spin"></div>
             <span className="mx-2">Software Developer</span>
-            <div className="spin"></div>
           </h2>
           <div className="mx-6">
             <p className="desc">{refer || about}</p>
