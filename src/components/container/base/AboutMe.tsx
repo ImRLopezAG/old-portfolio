@@ -1,28 +1,23 @@
 export const AboutMe = () => {
   const showAboutMe = () => {
-    const aboutMe = document.querySelector('.about-container p')
+    const aboutMe = document.querySelector('.about-container p') as HTMLElement
     aboutMe.classList.toggle('d-none')
 
-    const btnImg = document.querySelector('#btn-img')
+    const btnImg = document.querySelector('#btn-img') as HTMLImageElement
     // change the icon
     btnImg.src = btnImg.src.includes('un')
       ? './assets/icons/lock.svg'
       : './assets/icons/unlock.svg'
 
-    // change the text
-    const btnText = document.querySelector('.about-me span')
-    btnText.textContent = btnText.textContent.includes('About.me')
+    const btnText = document.querySelector('.about') as HTMLSpanElement
+    btnText.innerText = btnText.innerText.includes('About.me')
       ? 'Hide'
       : 'About.me'
   }
   return (
     <div className="about-container mt-1">
       <button onClick={showAboutMe} className="about-me">
-        <img
-          id="btn-img"
-          src="./assets/icons/lock.svg"
-          alt="Lock Icon"
-        />
+        <img id="btn-img" src="./assets/icons/lock.svg" alt="Lock Icon" />
         <span>About.me</span>
       </button>
       <p className="d-none flex mx-2 mt-2  text-justify">

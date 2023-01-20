@@ -1,7 +1,14 @@
 import { Extensions, Git, Menu, Profile, Projects } from '../container'
 
-export const Container = ({ section }) => {
-  const show = {
+interface ContainerProps {
+  section: string
+}
+
+export const Container = ({ section }: ContainerProps) => {
+  interface Show {
+    [key: string]: JSX.Element
+  }
+  const show: Show = {
     Extensions: <Extensions />,
     Git: <Git />,
     Menu: <Menu />,

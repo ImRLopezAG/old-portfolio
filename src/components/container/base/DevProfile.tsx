@@ -1,6 +1,10 @@
 import { Social } from './utils'
 
-export const DevProfile = ({ refer }) => {
+interface DevProfileProps {
+  refer?: string
+}
+
+export const DevProfile = ({ refer }: DevProfileProps) => {
   const about = `Software developer, passionate about technology in general, I like
   to find new challenges in the world of programming, provide and
   receive knowledge from my surroundings.`

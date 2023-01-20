@@ -1,6 +1,10 @@
 import { Buttons } from './'
 
-export const Nav = ({ setSectionHandler }) => {
+interface NavProps {
+  setSectionHandler: (section: string) => void
+}
+
+export const Nav = ({ setSectionHandler }: NavProps) => {
   const menu = [
     {
       name: 'Menu',

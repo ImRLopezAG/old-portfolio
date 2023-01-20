@@ -7,7 +7,7 @@ export const Git = () => {
   }
   const history = [
     {
-      Desc: 'First Commit',
+      Desc: 'Born - First Commit',
       Date: 'Dec 17 2002',
       Commit: generateRandomCommit(),
     },
@@ -17,7 +17,7 @@ export const Git = () => {
       Commit: generateRandomCommit(),
     },
     {
-      Desc: 'JOB - Villa Campa School of technology',
+      Desc: 'JOB - VillaCampa School of technology',
       Date: 'APR 2021 - Jan 2022',
       Commit: generateRandomCommit(),
     },
@@ -50,17 +50,17 @@ export const Git = () => {
           <tr>
             <th>Graph</th>
             <th>Description</th>
-            <th className='break'>Date</th>
-            <th className='break'>Author</th>
-            <th>Commit</th>
+            <th>Date</th>
+            <th className="break">Author</th>
+            <th className="break">Commit</th>
           </tr>
         </thead>
         <tbody className="table-body">
-          {history.map((item, index) => {
+          {history.map((item) => {
             const { Desc, Date, Commit } = item
             return (
               <GitRows
-                key={index}
+                key={Math.random()}
                 desc={Desc}
                 date={Date}
                 commit={Commit}

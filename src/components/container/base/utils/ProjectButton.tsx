@@ -1,11 +1,11 @@
 export const ProjectButton = () => {
   const handleShowProjects = () => {
-    const projects = document.querySelector('.toggle')
+    const projects = document.querySelector('.toggle') as HTMLImageElement
     projects.src = projects.src.includes('right')
       ? './assets/icons/caret-down.svg'
       : './assets/icons/caret-right.svg'
 
-    const allProjects = document.querySelector('.project')
+    const allProjects = document.querySelector('.project') as HTMLDivElement
     allProjects.classList.toggle('hidden')
   }
   return (

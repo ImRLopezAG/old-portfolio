@@ -1,11 +1,21 @@
-export const MenuCard = ({ name, description, language }) => {
+interface MenuCardProps {
+  name: string
+  description?: string
+  language?: string
+}
+
+export const MenuCard = ({ name, description, language }: MenuCardProps) => {
   const lang = language || 'Forked'
   const desc = description || 'No description'
   if (name.split('-').length > 1) {
     name = name.split('-').join(' ')
   }
 
-  const lngColor = {
+  interface LngColor {
+    [key: string]: string
+  }
+
+  const lngColor: LngColor  = {
     JavaScript: 'text-yellow-400',
     TypeScript: 'text-blue-400',
     HTML: 'text-red-400',

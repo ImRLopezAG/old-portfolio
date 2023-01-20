@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import { Skeleton } from './utils'
 
-export const Skills = ({ src, name, desc }) => {
+interface SkillsProps {
+  src: string
+  name: string
+  desc: string
+}
+
+export const Skills = ({ src, name, desc }: SkillsProps) => {
   const [loading, setLoading] = useState(true)
 
   const handleLoad = () => {
@@ -11,7 +17,7 @@ export const Skills = ({ src, name, desc }) => {
   return (
     <div className="skill-card">
       {loading && (
-        <div className='w-3/4'>
+        <div className="w-3/4">
           <Skeleton />
         </div>
       )}

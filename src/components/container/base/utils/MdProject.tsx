@@ -1,4 +1,9 @@
-export const MdProject = ({ name, pUrl }) => {
+interface MdProjectProps {
+  name: string
+  pUrl: string
+}
+
+export const MdProject = ({ name, pUrl }: MdProjectProps) => {
   if (name.split(' ').length > 1) {
     name = name.split(' ').join('-')
   }

@@ -1,8 +1,13 @@
 import { DevProfile, Skills } from './base'
-import { sortRandom } from './base/utils'
+
+interface Skill {
+  name: string
+  src: string
+  desc: string
+}
 
 export const Extensions = () => {
-  const skills = [
+  const skills: Skill[] = [
     {
       name: '.Net',
       src: './assets/extensions/.net.svg',
@@ -87,9 +92,9 @@ export const Extensions = () => {
   return (
     <div className="side c-grid">
       <div className="side-left left">
-        {skills.sortRandom().map((skill, index) => {
+        {skills.sortRandom().map((skill : Skill) => {
           const { name, src, desc } = skill
-          return <Skills key={name + index} name={name} src={src} desc={desc} />
+          return <Skills key={Math.random()} name={name} src={src} desc={desc} />
         })}
       </div>
       <div className="side-right right">

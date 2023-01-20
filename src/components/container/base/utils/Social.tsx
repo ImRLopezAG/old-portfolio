@@ -1,6 +1,12 @@
 import { Contact } from './'
 export const Social = () => {
-  const social = [
+  interface Social {
+    name: string
+    icon: string
+    link: string
+  }
+
+  const social: Social[] = [
     {
       name: 'linkedin',
       icon: 'bi bi-linkedin',
@@ -30,10 +36,10 @@ export const Social = () => {
 
   return (
     <div className="social">
-      {social.map((social, index) => {
+      {social.map((social) => {
         const { name, icon, link } = social
         return (
-          <Contact key={name + index} name={name} icon={icon} link={link} />
+          <Contact key={Math.random()} name={name} icon={icon} link={link} />
         )
       })}
     </div>

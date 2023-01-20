@@ -1,12 +1,18 @@
 import { MdProject } from './'
 
-export const ProjectsFolder = ({ name, id, url }) => {
+interface ProjectsFolderProps {
+  name: string
+  id: number
+  url: string
+}
+
+export const ProjectsFolder = ({ name, id, url }: ProjectsFolderProps) => {
   const handleShowProjects = () => {
-    const projects = document.querySelector(`.toggle-folder-${id}`)
+    const projects = document.querySelector(`.toggle-folder-${id}`) as HTMLImageElement
     projects.src = projects.src.includes('close')
       ? './assets/icons/folder-open.svg'
       : './assets/icons/folder-close.svg'
-    const projectFolder = document.querySelector(`.project-folder-${id}`)
+    const projectFolder = document.querySelector(`.project-folder-${id}`) as HTMLDivElement
     projectFolder.classList.toggle('hidden')
   }
   if (name.split('-').length > 1) {

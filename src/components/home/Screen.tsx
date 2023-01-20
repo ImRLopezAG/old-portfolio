@@ -4,7 +4,7 @@ import { Buttons, Nav } from './base'
 
 export const Screen = () => {
   const [state, setState] = useState('Profile')
-  const setSectionHandler = (section) => {
+  const setSectionHandler = (section: string) => {
     setState(section)
   }
   return (

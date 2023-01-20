@@ -13,7 +13,7 @@ export const Menu = () => {
               </>
             )
           : (
-              repo.map((project, index) => {
+              repo.map((project) => {
                 const { name, description, id, language } = project
                 return (
                   <MenuCard
