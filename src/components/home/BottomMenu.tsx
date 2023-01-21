@@ -38,29 +38,6 @@ export const BottomMenu = () => {
             />
             <span className="px-1"> main* </span>
           </div>
-          <div className="flex mx-4">
-            <img
-              className="w-4 h-6"
-              src="./assets/icons/refresh.svg"
-              alt="Sync Icon"
-            />
-          </div>
-          <div className="flex justify-evenly items-center w-16">
-            <img
-              className="w-4 h-5"
-              src="../assets/icons/error.svg"
-              alt="Times Icon"
-            />
-            <span>0</span>
-          </div>
-          <div className="flex items-center justify-evenly w-16">
-            <img
-              className="w-4 h-5"
-              src="../assets/icons/alert.svg"
-              alt="Danger Icon"
-            />
-            <span>0</span>
-          </div>
         </div>
         <div className="flex justify-end w-8/12 items-center px-5">
           <button
@@ -73,8 +50,8 @@ export const BottomMenu = () => {
               alt="Git cat"
             />
             <span className="px-1 font-bold">ImRLopez</span>
-            <img className="w-4 h-5 " src={flags[lang]} alt="Git cat" />
-            <span className="px-1">{lang === 'en' ? 'En' : 'Es'}</span>
+            <img className="w-4 h-5 " src={flags[lang]} alt="Lang" />
+            <span>{lang === 'en' ? 'En' : 'Es'}</span>
           </button>
         </div>
       </footer>
