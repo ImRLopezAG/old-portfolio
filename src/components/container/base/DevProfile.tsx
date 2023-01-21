@@ -1,13 +1,12 @@
+import { useTranslation, WithTranslationProps } from 'react-i18next'
 import { Social } from './utils'
 
 interface DevProfileProps {
-  refer?: string
+  refer: string
 }
 
 export const DevProfile = ({ refer }: DevProfileProps) => {
-  const about = `Software developer, passionate about technology in general, I like
-  to find new challenges in the world of programming, provide and
-  receive knowledge from my surroundings.`
+  const { t } = useTranslation()
   return (
     <div className="dev-profile">
       <div className="profile">
@@ -20,7 +19,7 @@ export const DevProfile = ({ refer }: DevProfileProps) => {
             <span className="mx-2">Software Developer</span>
           </h2>
           <div className="mx-6">
-            <p className="desc">{refer || about}</p>
+            <p className="desc">{refer || t('DevProfile')}</p>
           </div>
           <Social />
         </div>

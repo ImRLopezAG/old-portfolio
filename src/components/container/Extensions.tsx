@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { DevProfile, Skills } from './base'
 
 interface Skill {
@@ -7,6 +8,7 @@ interface Skill {
 }
 
 export const Extensions = () => {
+  const { t } = useTranslation()
   const skills: Skill[] = [
     {
       name: '.Net',
@@ -92,13 +94,15 @@ export const Extensions = () => {
   return (
     <div className="side c-grid">
       <div className="side-left left">
-        {skills.sortRandom().map((skill : Skill) => {
+        {skills.sortRandom().map((skill: Skill) => {
           const { name, src, desc } = skill
-          return <Skills key={Math.random()} name={name} src={src} desc={desc} />
+          return (
+            <Skills key={Math.random()} name={name} src={src} desc={desc} />
+          )
         })}
       </div>
       <div className="side-right right">
-        <DevProfile refer="These are the languages, framework, database or data administrator that I work" />
+        <DevProfile refer={t('Extensions')} />
       </div>
     </div>
   )

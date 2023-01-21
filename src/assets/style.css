@@ -30,14 +30,6 @@ html ::-webkit-scrollbar {
   @apply z-10;
 }
 
-.name {
-  @apply text-center text-sm font-bold;
-  @apply rounded-sm  hover:bg-stone-700;
-  @apply max-[360px]:text-xs p-0;
-  @apply max-[420px]:text-xs p-0;
-  padding: 0 0 0 5px;
-}
-
 .left-menu {
   @apply flex flex-col justify-between items-center;
   @apply w-13 h-full;
@@ -588,7 +580,7 @@ table {
   border: 5px solid #f3f3f3;
   border-top: 5px solid #3498db;
   border-radius: 50%;
-  animation: spin .5s linear infinite;
+  animation: spin 0.5s linear infinite;
 }
 
 @keyframes spin {

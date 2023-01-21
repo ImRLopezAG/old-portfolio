@@ -13,7 +13,7 @@ export const Git = () => {
     },
     {
       Desc: 'Education - ITLA Dominican Republic',
-      Date: 'Jan 2020 - Present',
+      Date: 'Jan 2021 - Present',
       Commit: generateRandomCommit(),
     },
     {

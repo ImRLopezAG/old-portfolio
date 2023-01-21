@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
+
 export const AboutMe = () => {
+  const { t } = useTranslation()
   const showAboutMe = () => {
     const aboutMe = document.querySelector('.about-container p') as HTMLElement
     aboutMe.classList.toggle('d-none')
@@ -21,8 +25,7 @@ export const AboutMe = () => {
         <span>About.me</span>
       </button>
       <p className="d-none flex mx-2 mt-2  text-justify">
-        I am a charismatic person, somewhat nice😁, ⛹I like basketball🏀,
-        sharing with my friends, the beach🏖️ and tranquility.
+        {t('AboutMe')}
       </p>
     </div>
   )
