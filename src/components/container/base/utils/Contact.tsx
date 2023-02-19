@@ -4,15 +4,15 @@ interface ContactProps {
   name: string
 }
 
-export const Contact = ({ link, icon, name }: ContactProps) => {
+export const Contact = ({ link, icon, name }: ContactProps): JSX.Element => {
   return (
     <a
-      className="social-item text-blue-500"
+      className='social-item text-blue-500'
       href={link}
-      rel="noreferrer"
-      target="_blank"
+      rel='noreferrer'
+      target='_blank'
     >
-      <i className={icon}></i>
+      <i className={icon} />
     </a>
   )
 }

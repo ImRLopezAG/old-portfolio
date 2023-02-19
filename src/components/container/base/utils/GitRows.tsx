@@ -5,16 +5,16 @@ interface GitRowsProps {
   auth: string
 }
 
-export const GitRows = ({ date, commit, desc, auth }: GitRowsProps) => {
+export const GitRows = ({ date, commit, desc, auth }: GitRowsProps): JSX.Element => {
   return (
-    <tr className="">
-      <td className="point">
-        <span className="circle"></span>
+    <tr className=''>
+      <td className='point'>
+        <span className='circle' />
       </td>
-      <td className="data">{desc}</td>
-      <td className="data">{date}</td>
-      <td className="data break">{auth}</td>
-      <td className="data break">{commit}</td>
+      <td className='data'>{desc}</td>
+      <td className='data'>{date}</td>
+      <td className='data break'>{auth}</td>
+      <td className='data break'>{commit}</td>
     </tr>
   )
 }

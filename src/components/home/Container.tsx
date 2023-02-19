@@ -1,10 +1,10 @@
-import { Extensions, Git, Menu, Profile, Projects } from '../container'
+import { Extensions, Games, Git, Menu, Profile, Projects } from '../container'
 
 interface ContainerProps {
   section: string
 }
 
-export const Container = ({ section }: ContainerProps) => {
+export const Container = ({ section }: ContainerProps): JSX.Element => {
   interface Show {
     [key: string]: JSX.Element
   }
@@ -14,6 +14,7 @@ export const Container = ({ section }: ContainerProps) => {
     Menu: <Menu />,
     Profile: <Profile />,
     Projects: <Projects />,
+    Games: <Games />
   }
-  return <main className="container">{show[section]}</main>
+  return <main className='container'>{show[section]}</main>
 }

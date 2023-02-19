@@ -1,11 +1,11 @@
 import { AboutMe, DevProfile } from './base'
 
-export const Profile = () => {
+export const Profile = (): JSX.Element => {
   return (
-    <div className="container flex-col items-center">
-      <section className="section">
+    <div className='container flex-col items-center'>
+      <section className='section'>
         <AboutMe />
-        <DevProfile refer="" />
+        <DevProfile refer='' />
       </section>
     </div>
   )

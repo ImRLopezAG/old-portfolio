@@ -1,5 +1,5 @@
 import { Contact } from './'
-export const Social = () => {
+export const Social = (): JSX.Element => {
   interface Social {
     name: string
     icon: string
@@ -10,32 +10,32 @@ export const Social = () => {
     {
       name: 'linkedin',
       icon: 'bi bi-linkedin',
-      link: 'https://www.linkedin.com/in/angel-gabriel-lopez',
+      link: 'https://www.linkedin.com/in/angel-gabriel-lopez'
     },
     {
       name: 'twitter',
       icon: 'bi bi-twitter',
-      link: 'https://twitter.com/ImR_Lopez',
+      link: 'https://twitter.com/ImR_Lopez'
     },
     {
       name: 'instagram',
       icon: 'bi bi-instagram',
-      link: 'https://www.instagram.com/imr_lopez.ag',
+      link: 'https://www.instagram.com/imr_lopez.ag'
     },
     {
       name: 'cv',
       icon: 'bi bi-file-earmark-person',
-      link: './assets/docs/cv.pdf',
+      link: './assets/docs/cv.pdf'
     },
     {
       name: 'github',
       icon: 'bi bi-github',
-      link: 'https://github.com/ImRLopezAG',
-    },
+      link: 'https://github.com/ImRLopezAG'
+    }
   ]
 
   return (
-    <div className="social">
+    <div className='social'>
       {social.map((social) => {
         const { name, icon, link } = social
         return (

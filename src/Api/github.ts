@@ -6,19 +6,25 @@ interface Repo {
   description: string
   html_url: string
   language: string
+  topics: string[]
+  fork: boolean
 }
 
-export const fetchRepos = async () => {
-  const data = await fetch(API)
-    .then((response) => response.json())
+export const fetchRepos = async (): Promise<Repo[]> => {
+  const data: Repo[] = await fetch(API)
+    .then(async (response) => await response.json())
     .then((data) => {
-      return data.map(({ id, name, description, html_url, language }: Repo) => ({
-        id,
-        name,
-        description,
-        html_url,
-        language,
-      }))
+      return data.map(
+        ({ id, name, description, html_url, language, topics, fork }: Repo) => ({
+          id,
+          name,
+          description,
+          html_url,
+          language,
+          topics,
+          fork
+        })
+      )
     })
 
   return data

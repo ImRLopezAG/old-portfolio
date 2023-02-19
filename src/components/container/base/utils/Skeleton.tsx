@@ -1,8 +1,8 @@
-export const Skeleton = () => {
+export const Skeleton = (): JSX.Element => {
   return (
-    <div className="loading  ">
-      <div className="spinner" />
-      <h1 className="relative -left-20 animate-pulse ">Loading...</h1>
+    <div className='loading  '>
+      <div className='spinner' />
+      <h1 className='relative -left-20 animate-pulse '>Loading...</h1>
     </div>
   )
 }

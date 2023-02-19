@@ -5,9 +5,9 @@ interface ButtonsProps {
   goTo?: string
 }
 
-export const Buttons = ({ src, name, handleClick, goTo }: ButtonsProps) => {
+export const Buttons = ({ src, name, handleClick, goTo }: ButtonsProps): JSX.Element => {
   return (
-    <div className="icon">
+    <div className='icon'>
       <button onClick={() => handleClick()}>
         <img src={src} alt={name} />
       </button>

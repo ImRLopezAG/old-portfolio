@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 
-export const AboutMe = () => {
+export const AboutMe = (): JSX.Element => {
   const { t } = useTranslation()
-  const showAboutMe = () => {
+  const showAboutMe = (): void => {
     const aboutMe = document.querySelector('.about-container p') as HTMLElement
     aboutMe.classList.toggle('d-none')
 
@@ -18,12 +18,12 @@ export const AboutMe = () => {
       : 'About.me'
   }
   return (
-    <div className="about-container mt-1">
-      <button onClick={showAboutMe} className="about-me">
-        <img id="btn-img" src="./assets/icons/lock.svg" alt="Lock Icon" />
-        <span className="about">About.me</span>
+    <div className='about-container mt-1'>
+      <button onClick={showAboutMe} className='about-me'>
+        <img id='btn-img' src='./assets/icons/lock.svg' alt='Lock Icon' />
+        <span className='about'>About.me</span>
       </button>
-      <p className="d-none flex mx-2 mt-2  text-justify">{t('AboutMe')}</p>
+      <p className='d-none flex mx-2 mt-2  text-justify'>{t('AboutMe')}</p>
     </div>
   )
 }

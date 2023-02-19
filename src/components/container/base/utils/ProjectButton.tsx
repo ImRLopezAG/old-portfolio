@@ -1,5 +1,5 @@
-export const ProjectButton = () => {
-  const handleShowProjects = () => {
+export const ProjectButton = (): JSX.Element => {
+  const handleShowProjects = (): void => {
     const projects = document.querySelector('.toggle') as HTMLImageElement
     projects.src = projects.src.includes('right')
       ? './assets/icons/caret-down.svg'
@@ -11,14 +11,14 @@ export const ProjectButton = () => {
   return (
     <button
       onClick={handleShowProjects}
-      className="flex flex-row items-center w-full mt-4"
+      className='flex flex-row items-center w-full mt-4'
     >
       <img
-        className="toggle"
-        src="./assets/icons/caret-right.svg"
-        alt="right"
+        className='toggle'
+        src='./assets/icons/caret-right.svg'
+        alt='right'
       />
-      <span className="mx-3 text-xl">Show Projects</span>
+      <span className='mx-3 text-xl'>Show Projects</span>
     </button>
   )
 }

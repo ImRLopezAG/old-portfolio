@@ -566,6 +566,11 @@ table {
   @apply text-xs;
   @apply truncate;
 }
+.menu-grid .card .card-body .card-topic {
+  @apply text-white p-1;
+  @apply text-xs;
+  
+}
 
 .loading {
   display: flex;

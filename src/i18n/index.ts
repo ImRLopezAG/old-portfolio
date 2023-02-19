@@ -17,8 +17,7 @@ i18n
             'These are some projects in which I have worked both freelance and personally',
           Extensions:
             'These are the languages, framework, database or data administrator that I work'
-
-        },
+        }
       },
       es: {
         translation: {
@@ -29,16 +28,15 @@ i18n
           Projects:
             'Estos son algunos proyectos en los que he trabajado tanto freelance como personalmente',
           Extensions:
-            'Estos son los lenguajes, framework, base de datos o administrador de datos con los que trabajo',
-    
-        },
-      },
+            'Estos son los lenguajes, framework, base de datos o administrador de datos con los que trabajo'
+        }
+      }
     },
     lng: 'en',
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false,
-    },
+      escapeValue: false
+    }
   })
 
 export default i18n

@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/method-signature-style */
+/* eslint-disable no-extend-native */
 declare global {
   interface Array<T> {
-    sortRandom(): Array<T>
+    sortRandom(): T[]
   }
 }
 export const sortRandom = (Array.prototype.sortRandom = function () {
