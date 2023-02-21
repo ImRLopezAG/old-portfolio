@@ -5,7 +5,7 @@ export const Profile = (): JSX.Element => {
     <div className='container flex-col items-center'>
       <section className='section'>
         <AboutMe />
-        <DevProfile refer='' />
+        <DevProfile />
       </section>
     </div>
   )

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Social } from './utils'
 
 interface DevProfileProps {
-  refer: string
+  refer?: string
 }
 
 export const DevProfile = ({ refer }: DevProfileProps): JSX.Element => {
