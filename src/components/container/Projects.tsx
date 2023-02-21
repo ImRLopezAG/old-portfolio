@@ -6,6 +6,7 @@ import { ProjectButton, ProjectsFolder, Skeleton } from './base/utils'
 export const Projects = (): JSX.Element => {
   const { repo, loading } = useRepo()
   const { t } = useTranslation()
+  const refer = t('Projects')
   return (
     <div className='side c-grid'>
       <div className='side-left left'>
@@ -37,7 +38,7 @@ export const Projects = (): JSX.Element => {
         </div>
       </div>
       <div className='side-right right'>
-        <DevProfile refer={t('Projects')} />
+        <DevProfile refer={refer} />
       </div>
     </div>
   )
