@@ -91,6 +91,7 @@ export const Extensions = (): JSX.Element => {
       desc: 'TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language.'
     }
   ]
+  const refer = t('Extensions')
   return (
     <div className='side c-grid'>
       <div className='side-left left'>
@@ -102,7 +103,7 @@ export const Extensions = (): JSX.Element => {
         })}
       </div>
       <div className='side-right right'>
-        <DevProfile refer={t('Extensions')} />
+        <DevProfile refer={refer} />
       </div>
     </div>
   )
