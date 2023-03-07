@@ -5,11 +5,15 @@ interface ButtonsProps {
   goTo?: string
 }
 
-export const Buttons = ({ src, name, handleClick, goTo }: ButtonsProps): JSX.Element => {
+interface Props {
+  BProps: ButtonsProps
+}
+
+export const Buttons: React.FC<Props> = ({ BProps }) => {
   return (
     <div className='icon'>
-      <button onClick={() => handleClick()}>
-        <img src={src} alt={name} />
+      <button onClick={() => BProps.handleClick()}>
+        <img src={BProps.src} alt={BProps.name} />
       </button>
     </div>
   )

@@ -25,10 +25,6 @@ export const Nav = ({ setSectionHandler }: NavProps): JSX.Element => {
     {
       name: 'Extensions',
       src: './assets/icons/extensions.svg'
-    },
-    {
-      name: 'Games',
-      src: './assets/icons/games.svg'
     }
   ]
   return (
@@ -37,10 +33,8 @@ export const Nav = ({ setSectionHandler }: NavProps): JSX.Element => {
         const { name, src } = item
         return (
           <Buttons
-            handleClick={() => setSectionHandler(name)}
-            src={src}
-            name={name}
             key={Math.random()}
+            BProps={{ src, name, handleClick: () => setSectionHandler(name) }}
           />
         )
       })}

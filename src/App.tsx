@@ -1,5 +1,5 @@
 import { BottomMenu, Screen } from './components'
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Screen />

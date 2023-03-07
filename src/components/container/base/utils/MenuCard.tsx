@@ -6,13 +6,17 @@ interface MenuCardProps {
   fork: boolean
 }
 
-export const MenuCard = ({ name, description, language, topics, fork }: MenuCardProps): JSX.Element => {
-  const lang = language ?? 'Forked'
-  const desc = description ?? 'No description'
-  if (name.split('-').length > 1) {
-    name = name.split('-').join(' ')
+interface Props {
+  MenuCard: MenuCardProps
+}
+
+export const MenuCard: React.FC<Props> = ({ MenuCard }) => {
+  const lang = MenuCard.language ?? 'Forked'
+  const desc = MenuCard.description ?? 'No description'
+  if (MenuCard.name.split('-').length > 1) {
+    MenuCard.name = MenuCard.name.split('-').join(' ')
   }
-  const topic = topics.join(', ')
+  const topic = MenuCard.topics.join(', ')
   interface LngColor {
     [key: string]: string
   }
@@ -35,7 +39,7 @@ export const MenuCard = ({ name, description, language, topics, fork }: MenuCard
         <img src='./assets/icons/octocat.svg' alt='octocat' loading='lazy' />
       </div>
       <div className='card-body'>
-        <h2 className='card-title'>{name}</h2>
+        <h2 className='card-title'>{MenuCard.name}</h2>
         <div className={`${lngColor[lang]}`}>
           <h4 className='card-lang'>{lang}</h4>
         </div>

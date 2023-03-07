@@ -1,4 +1,4 @@
-export const ProjectButton = (): JSX.Element => {
+export const ProjectButton: React.FC = () => {
   const handleShowProjects = (): void => {
     const projects = document.querySelector('.toggle') as HTMLImageElement
     projects.src = projects.src.includes('right')

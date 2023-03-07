@@ -13,13 +13,15 @@ export const Screen = (): JSX.Element => {
         <Nav setSectionHandler={setSectionHandler} />
         <nav className='btn-profile'>
           <Buttons
-            handleClick={() => setSectionHandler('Profile')}
-            src='./assets/icons/account.svg'
-            name='Profile'
+            BProps={{
+              src: './assets/icons/account.svg',
+              name: 'Profile',
+              handleClick: () => setSectionHandler('Profile')
+            }}
           />
         </nav>
       </header>
-      <Container section={state} />
+      <Container Container={{ section: state }} />
     </>
   )
 }

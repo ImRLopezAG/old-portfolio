@@ -7,7 +7,7 @@ interface Skill {
   desc: string
 }
 
-export const Extensions = (): JSX.Element => {
+export const Extensions: React.FC = () => {
   const { t } = useTranslation()
   const skills: Skill[] = [
     {
@@ -97,9 +97,7 @@ export const Extensions = (): JSX.Element => {
       <div className='side-left left'>
         {skills.sortRandom().map((skill: Skill) => {
           const { name, src, desc } = skill
-          return (
-            <Skills key={Math.random()} name={name} src={src} desc={desc} />
-          )
+          return <Skills key={Math.random()} Skill={{ name, src, desc }} />
         })}
       </div>
       <div className='side-right right'>

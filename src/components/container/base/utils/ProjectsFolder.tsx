@@ -6,17 +6,27 @@ interface ProjectsFolderProps {
   url: string
 }
 
-export const ProjectsFolder = ({ name, id, url }: ProjectsFolderProps): JSX.Element => {
+interface Props {
+  ProjectsFolder: ProjectsFolderProps
+}
+export const ProjectsFolder: React.FC<Props> = ({ ProjectsFolder }) => {
+  const name = ProjectsFolder.name
+  const pUrl = ProjectsFolder.url
+
   const handleShowProjects = (): void => {
-    const projects = document.querySelector(`.toggle-folder-${id}`) as HTMLImageElement
+    const projects = document.querySelector(
+      `.toggle-folder-${ProjectsFolder.id}`
+    ) as HTMLImageElement
     projects.src = projects.src.includes('close')
       ? './assets/icons/folder-open.svg'
       : './assets/icons/folder-close.svg'
-    const projectFolder = document.querySelector(`.project-folder-${id}`) as HTMLDivElement
+    const projectFolder = document.querySelector(
+      `.project-folder-${ProjectsFolder.id}`
+    ) as HTMLDivElement
     projectFolder.classList.toggle('hidden')
   }
   if (name.split('-').length > 1) {
-    name = name.split('-').join(' ')
+    ProjectsFolder.name = name.split('-').join(' ')
   }
   return (
     <div>
@@ -25,14 +35,14 @@ export const ProjectsFolder = ({ name, id, url }: ProjectsFolderProps): JSX.Elem
         onClick={handleShowProjects}
       >
         <img
-          className={`toggle-folder-${id} folder-img`}
+          className={`toggle-folder-${ProjectsFolder.id} folder-img`}
           src='./assets/icons/folder-close.svg'
           alt='folder'
         />
         <p className='folder-name truncate'>{name}</p>
       </button>
-      <div className={`project-folder-${id} hidden`}>
-        <MdProject name={name} pUrl={url} />
+      <div className={`project-folder-${ProjectsFolder.id} hidden`}>
+        <MdProject MdProject={{ name, pUrl }} />
       </div>
     </div>
   )

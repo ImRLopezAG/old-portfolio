@@ -3,13 +3,17 @@ interface MdProjectProps {
   pUrl: string
 }
 
-export const MdProject = ({ name, pUrl }: MdProjectProps): JSX.Element => {
-  if (name.split(' ').length > 1) {
-    name = name.split(' ').join('-')
+interface Props {
+  MdProject: MdProjectProps
+}
+
+export const MdProject: React.FC<Props> = ({ MdProject }) => {
+  if (MdProject.name.split(' ').length > 1) {
+    MdProject.name = MdProject.name.split(' ').join('-')
   }
   return (
     <a
-      href={`${pUrl}#readme`}
+      href={`${MdProject.pUrl}#readme`}
       className='flex flex-row items-center ml-16 w-full '
       target='_blank'
       rel='noreferrer'
@@ -19,7 +23,7 @@ export const MdProject = ({ name, pUrl }: MdProjectProps): JSX.Element => {
         src='./assets/icons/md.svg'
         alt='mark down'
       />
-      <span className='mx-2 text-suspensive'>{name}.md</span>
+      <span className='mx-2 text-suspensive'>{MdProject.name}.md</span>
     </a>
   )
 }

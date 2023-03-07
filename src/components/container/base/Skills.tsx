@@ -7,7 +7,11 @@ interface SkillsProps {
   desc: string
 }
 
-export const Skills = ({ src, name, desc }: SkillsProps): JSX.Element => {
+interface Props {
+  Skill: SkillsProps
+}
+
+export const Skills: React.FC<Props> = ({ Skill }) => {
   const [loading, setLoading] = useState(true)
 
   const handleLoad = (): void => {
@@ -23,7 +27,7 @@ export const Skills = ({ src, name, desc }: SkillsProps): JSX.Element => {
       )}
       <div className='skill-img'>
         <img
-          src={src}
+          src={Skill.src}
           alt='skill'
           onLoad={handleLoad.bind(this)}
           style={{ display: loading ? 'none' : 'block' }}
@@ -31,7 +35,7 @@ export const Skills = ({ src, name, desc }: SkillsProps): JSX.Element => {
       </div>
       <div className='skill-body'>
         <div className='skill-info'>
-          <h1 className='skill-name'>{name}</h1>
+          <h1 className='skill-name'>{Skill.name}</h1>
         </div>
         <div className='options'>
           <p className='skill-desc'>Angel Lopez</p>

@@ -21,14 +21,12 @@ export const Projects = (): JSX.Element => {
                   </div>
                   )
                 : (
-                    repo.map((project, index) => {
+                    repo.map((project) => {
                       const { id, name, html_url } = project
                       return (
                         <ProjectsFolder
                           key={id}
-                          name={name}
-                          id={id}
-                          url={html_url}
+                          ProjectsFolder={{ id, name, url: html_url }}
                         />
                       )
                     })

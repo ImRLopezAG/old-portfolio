@@ -1,18 +1,21 @@
 interface ContactProps {
   link: string
   icon: string
-  name: string
 }
 
-export const Contact = ({ link, icon, name }: ContactProps): JSX.Element => {
+interface Props {
+  Contact: ContactProps
+}
+
+export const Contact: React.FC<Props> = ({ Contact }) => {
   return (
     <a
       className='social-item text-blue-500'
-      href={link}
+      href={Contact.link}
       rel='noreferrer'
       target='_blank'
     >
-      <i className={icon} />
+      <i className={Contact.icon} />
     </a>
   )
 }

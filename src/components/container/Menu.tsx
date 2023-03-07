@@ -15,11 +15,7 @@ export const Menu = (): JSX.Element => {
               return (
                 <MenuCard
                   key={id}
-                  name={name}
-                  description={description}
-                  language={language}
-                  topics={topics}
-                  fork={fork}
+                  MenuCard={{ name, description, language, topics, fork }}
                 />
               )
             })

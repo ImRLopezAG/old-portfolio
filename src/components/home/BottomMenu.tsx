@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-export const BottomMenu = (): JSX.Element => {
+export const BottomMenu: React.FC = (): JSX.Element => {
   type language = 'en' | 'es'
   const { i18n } = useTranslation('en')
 

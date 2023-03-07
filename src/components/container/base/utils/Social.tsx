@@ -25,7 +25,7 @@ export const Social = (): JSX.Element => {
     {
       name: 'cv',
       icon: 'bi bi-file-earmark-person',
-      link: './assets/docs/cv.pdf'
+      link: 'https://docs.google.com/document/d/176L3kfuVECauW3vadR9yKZREDEfgXDadVGqQ3zm51wc/edit?usp=sharing'
     },
     {
       name: 'github',
@@ -37,9 +37,9 @@ export const Social = (): JSX.Element => {
   return (
     <div className='social'>
       {social.map((social) => {
-        const { name, icon, link } = social
+        const { icon, link } = social
         return (
-          <Contact key={Math.random()} name={name} icon={icon} link={link} />
+          <Contact key={Math.random()} Contact={{ icon, link }} />
         )
       })}
     </div>

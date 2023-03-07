@@ -1,10 +1,14 @@
-import { Extensions, Games, Git, Menu, Profile, Projects } from '../container'
+import { Extensions, Git, Menu, Profile, Projects } from '../container'
 
 interface ContainerProps {
   section: string
 }
 
-export const Container = ({ section }: ContainerProps): JSX.Element => {
+interface Props {
+  Container: ContainerProps
+}
+
+export const Container: React.FC<Props> = ({ Container }) => {
   interface Show {
     [key: string]: JSX.Element
   }
@@ -13,8 +17,7 @@ export const Container = ({ section }: ContainerProps): JSX.Element => {
     Git: <Git />,
     Menu: <Menu />,
     Profile: <Profile />,
-    Projects: <Projects />,
-    Games: <Games />
+    Projects: <Projects />
   }
-  return <main className='container'>{show[section]}</main>
+  return <main className='container'>{show[Container.section]}</main>
 }
