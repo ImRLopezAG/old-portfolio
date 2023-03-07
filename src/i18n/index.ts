@@ -16,7 +16,9 @@ i18n
           Projects:
             'These are some projects in which I have worked both freelance and personally',
           Extensions:
-            'These are the languages, framework, database or data administrator that I work'
+            'These are the languages, framework, database or data administrator that I work',
+          CV:
+          'https://docs.google.com/document/d/176L3kfuVECauW3vadR9yKZREDEfgXDadVGqQ3zm51wc/edit?usp=sharing'
         }
       },
       es: {
@@ -28,7 +30,9 @@ i18n
           Projects:
             'Estos son algunos proyectos en los que he trabajado tanto freelance como personalmente',
           Extensions:
-            'Estos son los lenguajes, framework, base de datos o administrador de datos con los que trabajo'
+            'Estos son los lenguajes, framework, base de datos o administrador de datos con los que trabajo',
+          CV:
+            'https://docs.google.com/document/d/1uVmVIKEH8gVXqJlvgzesQhzSGtUaKD_vSVEFGAslqDo/edit?usp=sharing'
         }
       }
     },

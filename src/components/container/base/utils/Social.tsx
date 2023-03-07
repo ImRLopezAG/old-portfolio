@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import { Contact } from './'
-export const Social = (): JSX.Element => {
+
+export const Social: React.FC = () => {
+  const { t } = useTranslation()
   interface Social {
     name: string
     icon: string
@@ -25,7 +28,7 @@ export const Social = (): JSX.Element => {
     {
       name: 'cv',
       icon: 'bi bi-file-earmark-person',
-      link: 'https://docs.google.com/document/d/176L3kfuVECauW3vadR9yKZREDEfgXDadVGqQ3zm51wc/edit?usp=sharing'
+      link: t('CV')
     },
     {
       name: 'github',
